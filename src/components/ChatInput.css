@@ -1,0 +1,110 @@
+.chat-input__wrapper {
+    padding: 0 16px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.chat-input__relative {
+    position: relative;
+}
+
+.chat-input {
+    width: 100%;
+}
+
+.chat-input__container {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 10px 14px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.chat-input__container:focus-within {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-glow);
+}
+
+.chat-input__textarea {
+    flex: 1;
+    resize: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.938rem;
+    line-height: 1.5;
+    max-height: 200px;
+    padding: 4px 0;
+}
+
+.chat-input__textarea::placeholder {
+    color: var(--text-tertiary);
+}
+
+.chat-input__textarea:disabled {
+    opacity: 0.6;
+}
+
+.chat-input__btn {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.chat-input__btn--send {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.chat-input__btn--send:hover:not(:disabled) {
+    background: var(--accent-hover);
+    transform: scale(1.05);
+}
+
+.chat-input__btn--send:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.chat-input__btn--stop {
+    background: #ef4444;
+    color: #fff;
+}
+
+.chat-input__btn--stop:hover {
+    background: #dc2626;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.chat-input__hint {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 8px;
+}

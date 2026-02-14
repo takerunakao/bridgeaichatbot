@@ -1,0 +1,102 @@
+.stamp-picker {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 0;
+    width: 340px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    z-index: 200;
+    animation: fadeInUp 0.2s ease;
+    overflow: hidden;
+}
+
+.stamp-picker__header {
+    padding: 12px 14px 8px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.stamp-picker__title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stamp-picker__grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2px;
+    padding: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.stamp-picker__stamp {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.stamp-picker__stamp:hover {
+    background: var(--bg-hover);
+    transform: scale(1.2);
+}
+
+.stamp-picker__stamp:active {
+    transform: scale(0.95);
+}
+
+.stamp-picker__categories {
+    display: flex;
+    gap: 2px;
+    padding: 6px 8px;
+    border-top: 1px solid var(--border-light);
+    background: var(--bg-sidebar);
+}
+
+.stamp-picker__cat-btn {
+    flex: 1;
+    padding: 6px;
+    font-size: 1.1rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.stamp-picker__cat-btn:hover {
+    opacity: 1;
+    background: var(--bg-hover);
+}
+
+.stamp-picker__cat-btn.active {
+    opacity: 1;
+    background: var(--bg-hover);
+}
+
+/* Trigger button */
+.stamp-trigger {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-tertiary);
+    transition: all var(--transition-fast);
+}
+
+.stamp-trigger:hover {
+    color: var(--accent);
+    background: var(--bg-hover);
+}
