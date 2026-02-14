@@ -35,7 +35,7 @@ OpenAI の最新モデル（GPT-5.2 / 5.1 / 4.1 など）とリアルタイム�
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/<your-username>/bridgeaichatbot.git
+git clone https://github.com/takerunakao/bridgeaichatbot.git
 cd bridgeaichatbot
 
 # 依存関係をインストール
@@ -94,7 +94,7 @@ src/
 
 ## ▲ Vercel へデプロイ
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F<your-username>%2Fbridgeaichatbot&env=OPENAI_API_KEY&envDescription=OpenAI%20API%20Key%20%E2%80%94%20https%3A%2F%2Fplatform.openai.com%2Fapi-keys)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftakerunakao%2Fbridgeaichatbot&env=OPENAI_API_KEY&envDescription=OpenAI%20API%20Key%20%E2%80%94%20https%3A%2F%2Fplatform.openai.com%2Fapi-keys)
 
 ### 手動デプロイ
 
