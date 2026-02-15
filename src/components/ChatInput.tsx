@@ -36,6 +36,9 @@ export default function ChatInput({
     }, [input]);
 
     const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+        // IME変換中（日本語入力の漢字変換など）はEnterで送信しない
+        if (e.nativeEvent.isComposing || e.keyCode === 229) return;
+
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             if (input.trim() && !isLoading) {
